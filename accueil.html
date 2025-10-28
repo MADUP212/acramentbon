@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acrament’Bon — Hero (autonome)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .pack-zone { isolation: isolate; }
+    .pack-img {
+      mix-blend-mode: multiply;
+      filter: brightness(0.98) contrast(1.08) saturate(1.05) hue-rotate(-4deg);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 88%, rgba(0,0,0,0) 100%);
+              mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 88%, rgba(0,0,0,0) 100%);
+    }
+    .pack-shadow { filter: drop-shadow(0 14px 24px rgba(0,0,0,0.35)); }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-emerald-700 via-emerald-600 to-sky-700 text-white min-h-screen">
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/80 border-b border-black/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="w-16 h-16 rounded-full bg-black flex items-center justify-center overflow-hidden">
+          <svg width="56" height="56" viewBox="0 0 56 56" aria-label="Logo">
+            <circle cx="28" cy="28" r="28" fill="black" />
+            <text x="50%" y="54%" font-size="12" text-anchor="middle" fill="white" font-family="system-ui">A’Bon</text>
+          </svg>
+        </div>
+        <span class="font-semibold tracking-wide text-xl md:text-2xl flex items-center h-16 text-[#1E88E5]">Acrament’Bon</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-[#1E88E5]">
+        <a class="hover:text-[#1565C0]" href="#produits">Produits</a>
+        <a class="hover:text-[#1565C0]" href="#recettes">Recettes</a>
+        <a class="hover:text-[#1565C0]" href="#ou-acheter">Où acheter</a>
+        <a class="hover:text-[#1565C0]" href="#b2b">HRI / Distribution</a>
+        <a class="hover:text-[#1565C0]" href="#apropos">À propos</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="relative overflow-hidden bg-transparent text-white">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16 sm:pt-14 sm:pb-24">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-4xl sm:text-5xl font-black leading-tight">Des acras de légumes pour rassembler tout le monde.</h1>
+          <p class="mt-4 text-lg text-white/90">Végane, sans allergènes majeurs, faits ici avec des surplus de légumes du Québec. Prêts en 10 minutes, croustillants à souhait.</p>
+          <div class="mt-6 flex flex-wrap items-center gap-3">
+            <a href="#ou-acheter" class="px-4 py-2 rounded-2xl bg-yellow-400 hover:bg-yellow-300 transition font-medium shadow text-black">Où acheter</a>
+            <a href="#b2b" class="px-4 py-2 rounded-2xl border border-white/60 text-white hover:bg-white/10 transition">Pour les pros (HRI)</a>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-2 text-sm">
+            <span class="px-3 py-1 rounded-full border border-white/50 bg-white/20 backdrop-blur">Sans allergènes majeurs</span>
+            <span class="px-3 py-1 rounded-full border border-white/50 bg-white/20 backdrop-blur">100% végétal</span>
+            <span class="px-3 py-1 rounded-full border border-white/50 bg-white/20 backdrop-blur">Fait au Québec</span>
+            <span class="px-3 py-1 rounded-full border border-white/50 bg-white/20 backdrop-blur">Prêt en 10 min</span>
+          </div>
+        </div>
+
+        <div class="relative h-80 md:h-[28rem] flex justify-center items-end gap-6 pack-zone">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="Sachet patates douces" class="pack-img pack-shadow w-36 md:w-44 h-auto object-contain rotate-[-6deg] -translate-y-6 sm:-translate-y-10" />
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="Sachet courges butternut" class="pack-img pack-shadow w-36 md:w-44 h-auto object-contain rotate-[4deg] -mb-2 -translate-y-8 sm:-translate-y-12" />
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="Sauce mangue épicée" class="pack-img pack-shadow hidden md:block w-20 h-auto object-contain -translate-y-4 sm:-translate-y-8" />
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
+

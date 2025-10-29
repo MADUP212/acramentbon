@@ -1,0 +1,22 @@
+name: Notion Production Workflow
+
+on:
+  schedule:
+    - cron: "0 * * * *"  # Toutes les heures (adapte à ton besoin)
+  workflow_dispatch:
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+      - name: Install Dependencies
+        run: pip install requests
+      - name: Run Notion Automation Script
+        env:
+          NOTION_SECRET_TOKEN: ${{ secrets.NOTION_SECRET_TOKEN }}
+        run: python notion_production_workflow.py
